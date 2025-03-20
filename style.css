@@ -14,8 +14,7 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   display: grid;
-  grid-template-rows: auto 33px;
-  
+  grid-template-rows: 1fr auto;
 }
 
 .main {
