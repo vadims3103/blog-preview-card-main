@@ -107,6 +107,11 @@ body {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--bg-color);
 }
 
 .description {
