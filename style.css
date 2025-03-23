@@ -1,13 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
 :root {
   --bg-color: #F4D04E;
   --main-font-color: #111111;
   --secondary-font-color: #6B6B6B;
+  --card-color: #ffffff;
   --font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
+  font-family: "Figtree", sans-serif;
 }
 
 .container {
@@ -21,6 +29,9 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .attribution {
@@ -31,4 +42,101 @@ body {
 
 .attribution a { 
   color: hsl(228, 45%, 44%);
+}
+
+.card {
+  background-color: var(--card-color);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 1px solid black;
+  max-width: 329px;
+  width: 100%;
+  box-shadow: 8px 8px black;
+}
+
+.card-thumbnail {
+  border-radius: 10px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.course-description {
+  margin: 24px 0;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+}
+
+.author-thumbnail {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.author-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--main-font-color);
+}
+
+.label-container {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.label {
+  padding: 4px 12px;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.publishing-date {
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secondary-font-color);
+}
+
+@media screen and (min-width: 480px) {
+  .card {
+    max-width: 386px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .publishing-date {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+  
+  .description {
+    font-size: 16px;
+  }
+
+  .author-name {
+    font-size: 16px;
+  }
 }
